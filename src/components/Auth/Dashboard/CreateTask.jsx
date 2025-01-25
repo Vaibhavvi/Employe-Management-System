@@ -84,20 +84,13 @@ const CreateTask = () => {
 
         <div>
           <label htmlFor="assignTo" className="block text-white">Assign To</label>
-          <select
+          <textarea
             id="assignTo"
             className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             value={assignTo}
             onChange={(e) => setAssignTo(e.target.value)}
-            required
           >
-            <option value="">Select Employee</option>
-            {userData?.employees?.map((employee) => (
-              <option key={employee.firstName} value={employee.firstName}>
-                {employee.firstName} {employee.lastName}
-              </option>
-            ))}
-          </select>
+          </textarea>
         </div>
 
         <button
